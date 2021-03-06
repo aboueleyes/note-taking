@@ -1,17 +1,16 @@
-# This MakeFile is to generate PDFs from Markdowm 
+# Generate PDFs from the Markdown source files
 
-# Directory containing Markdowm files 
-source := src 
+# Directory containing source (Markdown) files
+source := src
 
-# Directory containing Markdowm files 
-output := out 
+# Directory containing pdf files
+output := out
 
-# markdown in src/ are considered source
+# All markdown files in src/ are considered sources
 sources := $(wildcard $(source)/*.md)
 
 # Convert the list of source files (Markdown files in directory src/)
 # into a list of output files (PDFs in directory out/).
-
 objects := $(patsubst %.md,%.pdf,$(subst $(source),$(output),$(sources)))
 
 all: $(objects)
