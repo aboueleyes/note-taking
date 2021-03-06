@@ -23,6 +23,11 @@ author : Ibrahim Abou Elenein
 ```
 
 # Python 3
+```python
+from tqdm import trange 
+for i in trange(10000000):
+    print(f"{i}")
+```
 
 Hello World 
 
