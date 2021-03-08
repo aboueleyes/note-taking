@@ -47,3 +47,6 @@ Hello World
 | Header      | Title       | Here's this   |
 | Paragraph   | Text        | And more      |
 
+$$ y = \int ^0 _\infty e^{-x^2} dx $$
+$$     \oint_V f(s) \,ds $$
+$$\displaystyle{\lim_{x \to \infty} \frac{1}{x}}$$
