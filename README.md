@@ -1,23 +1,35 @@
-# Note Taking 
+<div dir=rtl>
 
-### Take notes easily with markdown and convert it to pdf 
+# تدوينات
 
-## Installaion 
+خذ تدويناتك وملاحظاتك بسهولة عن طريق الـ markdown ثو تحويلها إلى pdf.
+
+Read this in [English](README-EN.md).
+
+## متطلبات 
 1. [pandoc](https://pandoc.org/installing.html)
 2. [LaTeX](https://www.latex-project.org/get/)
-3. [GNU make for win](http://gnuwin32.sourceforge.net/packages/make.htm) for Linux/mac use your package manger
+3. [GNU make for win](http://gnuwin32.sourceforge.net/packages/make.htm) أو استخدم مدير الحزم الخاص بنظام تشغيل إن كان Linux/Mac.
 
-## Auto-preview
+## العرض التلقائي
 
-You can follow instructions in this [article](https://dev.to/l04db4l4nc3r/vim-to-the-rescue-pdf-preview-2e10) to get your files auto previewed while editing.
+إذا ما كنت تريد عرض التعديلات تلقائيا أثناء الكتابة، قم باتباع التعليمات التي في هذه [المقالة](https://dev.to/l04db4l4nc3r/vim-to-the-rescue-pdf-preview-2e10).
 
-## use make :) 
+## طريقة الاستخدام :) 
+
+**.تأكد أن** ملفاتك أسمائها لا تحتوي على مسافات بيضاء
+
 ```bash
-❯ ./build FILE_NAME      # ./src/FILE_NAME.md ابني الملف
-❯ make                   # ابني كل الملفات
-❯ make clean             # امسح كل الملفات داخل موضع الخَرْج
-❯ make -B                # ابني كل الملفات إجبارا حتى لو لم يتغير
-❯ make --always-make     # ابني كل الملفات إجبارا حتى لو لم يتغير
-❯ make -j4               # ابني كل الملفات لا تزامنيا
-❯ make -jobs=4           # ابني كل الملفات لا تزامنيا
+❯ make                     # ابني كل الملفات
+❯ make help                # احصل على مساعدة
+❯ make FILES=file1,file2   # ابني ملفات بعينها
+❯ make FILES="file1 file2" # ابني ملفات بعينها
+❯ make FILES="$(echo file{1..20})" # ابني ملفات بعينها
+❯ make clean               # امسح كل الملفات داخل موضع الخَرْج
+❯ make -B                  # ابني كل الملفات إجبارا حتى لو لم يتغير
+❯ make --always-make       # ابني كل الملفات إجبارا حتى لو لم يتغير
+❯ make -j4                 # ابني كل الملفات لا تزامنيا
+❯ make -jobs=4             # ابني كل الملفات لا تزامنيا
 ```
+
+</div>
