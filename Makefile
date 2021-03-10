@@ -18,7 +18,7 @@ objects := $(patsubst %.md,%.pdf,$(subst $(source),$(output),$(sources)))
 all: $(output) $(objects)
 
 $(output):
-	test -d $(output) || mkdir $(output)
+	test -d $(output) || mkdir -p $(output)
 
 # Recipe for converting a Markdown file into PDF using Pandoc
 $(output)/%.pdf: $(source)/%.md
