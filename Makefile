@@ -11,7 +11,7 @@ sources := $(wildcard $(source)/*.md)
 
 # Convert the list of source files (Markdown files in directory src/)
 # into a list of output files (PDFs in directory out/).
-objects := $(patsubst %.md,%.pdf,$(subst $(source),$(output),$(sources)))
+objects := $(sources:$(source)/%.md=$(output)/%.pdf)
 
 .PHONY: clean
 
