@@ -13,7 +13,12 @@ sources := $(wildcard $(source)/*.md)
 # into a list of output files (PDFs in directory out/).
 objects := $(patsubst %.md,%.pdf,$(subst $(source),$(output),$(sources)))
 
-all: $(objects)
+.PHONY: clean
+
+all: $(output) $(objects)
+
+$(output):
+	test -d $(output) || mkdir -p $(output)
 
 # Recipe for converting a Markdown file into PDF using Pandoc
 $(output)/%.pdf: $(source)/%.md
@@ -29,7 +34,6 @@ $(output)/%.pdf: $(source)/%.md
 		--pdf-engine=xelatex \
 		-o $@
 
-.PHONY : clean
-
 clean:
 	rm -f $(output)/*.pdf
+
