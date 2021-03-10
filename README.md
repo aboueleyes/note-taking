@@ -1,10 +1,11 @@
+## Read this in [English](README-EN.md).
+
 <div dir=rtl>
 
 # تدوينات
 
 خذ تدويناتك وملاحظاتك بسهولة عن طريق الـ markdown ثو تحويلها إلى pdf.
 
-Read this in [English](README-EN.md).
 
 ## متطلبات 
 1. [pandoc](https://pandoc.org/installing.html)
