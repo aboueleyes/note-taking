@@ -13,13 +13,13 @@ author : Ibrahim Abou Elenein
 ## Code snippet 
 ```c 
 #include <stdio.h>
-    int sum (int ** arr, int length){
-        int sum = 0;
-        for (int i = 0; i < length; i++){
-            sum += arr[i];
-        }
-        return sum;
-    }
+int sum (int ** arr, int length){
+  int sum = 0;
+  for (int i = 0; i < length; i++){
+    sum += arr[i];
+  }
+  return sum;
+}
 ```
 
 # Python 3
@@ -33,13 +33,10 @@ Hello World
 
 > Hey ??
 
-
-
 | Syntax      | Description |
 | ----------- | ----------- |
 | Header      | Title       |
 | Paragraph   | Text        |
-
 
 
 | Syntax      | Description | Test Text     |
@@ -48,5 +45,7 @@ Hello World
 | Paragraph   | Text        | And more      |
 
 $$ y = \int ^0 _\infty e^{-x^2} dx $$
-$$     \oint_V f(s) \,ds $$
+
+$$ \oint_V f(s) \,ds $$
+
 $$\displaystyle{\lim_{x \to \infty} \frac{1}{x}}$$
