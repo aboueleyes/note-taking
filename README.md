@@ -19,6 +19,8 @@ Read this in [English](README-EN.md).
 
 **.تأكد أن** ملفاتك أسمائها لا تحتوي على مسافات بيضاء
 
+<div dir=ltr>
+
 ```bash
 ❯ make                     # ابني كل الملفات
 ❯ make help                # احصل على مساعدة
@@ -31,5 +33,7 @@ Read this in [English](README-EN.md).
 ❯ make -j4                 # ابني كل الملفات لا تزامنيا
 ❯ make -jobs=4             # ابني كل الملفات لا تزامنيا
 ```
+
+</div>
 
 </div>
