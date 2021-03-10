@@ -7,16 +7,16 @@ source := src
 output := out
 
 ifeq ($(origin FILES), undefined)
-# All markdown files in src/ are considered sources
-sources := $(wildcard $(source)/*.md)
-# Convert the list of source files (Markdown files in directory src/)
-# into a list of output files (PDFs in directory out/).
-objects := $(sources:$(source)/%.md=$(output)/%.pdf)
+	# All markdown files in src/ are considered sources
+	sources := $(wildcard $(source)/*.md)
+	# Convert the list of source files (Markdown files in directory src/)
+	# into a list of output files (PDFs in directory out/).
+	objects := $(sources:$(source)/%.md=$(output)/%.pdf)
 else
-# build only the FILES list
-COMMA      := ,
-file_names := $(subst $(COMMA), ,$(FILES))
-objects    := $(file_names:%=$(output)/%.pdf)
+	# build only the FILES list
+	COMMA      := ,
+	file_names := $(subst $(COMMA), ,$(FILES))
+	objects    := $(file_names:%=$(output)/%.pdf)
 endif
 
 .PHONY: clean
